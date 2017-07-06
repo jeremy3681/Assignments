@@ -1,0 +1,76 @@
+Jeremy Albert Program 3
+
+stdio.cpp
+My implementation of stdio. There is not as much error checking as the library implementation.
+I read and for the most part understand the library implementation of stidio, and it is quite robust. 
+I assume that as long as my implementation works for driver.cpp and eval.cpp that it's good.
+
+driver.sh
+Compiles the driver program using my implementation of stdio.h
+Runs driver on othello.txt & hamlet.txt and redirects outputs to corresponding files.
+Runs diff on the supplied output and generated output
+NOTE: Supplied output has an extraneous writeBuffer message, so I ignore those lines.
+Runs diff on the files written by driver and the supplied files
+
+eval.sh
+Compiles myeval with the -ofast flag, which uses my implementation of stdio.h
+Compiles stdeval, which uses the library stdio
+NOTE:Some minor changes were made to stdeval so no warnings are generated
+Given the name of a file generates times of library implementation of stdio, my implementation of stdio, and Unix I/O
+
+Times for hamlet.txt
+<stdio.h> Reads : C File I/O [Read   once     ] = 217
+"stdio.h" Reads : C File I/O [Read   once     ] = 117
+Unix I/O  Reads : Unix   I/O [Read   once     ] = 99
+<stdio.h> Reads : C File I/O [Block  transfers] = 130
+"stdio.h" Reads : C File I/O [Block  transfers] = 51
+Unix I/O  Reads : Unix   I/O [Block  transfers] = 36
+<stdio.h> Reads : C File I/O [Char   transfers] = 2536
+"stdio.h" Reads : C File I/O [Char   transfers] = 5427
+Unix I/O  Reads : Unix   I/O [Char   transfers] = 60211
+<stdio.h> Reads : C File I/O [Random transfers] = 136
+"stdio.h" Reads : C File I/O [Random transfers] = 91
+Unix I/O  Reads : Unix   I/O [Random transfers] = 76
+<stdio.h> Writes: C File I/O [Read   once     ] = 153
+"stdio.h" Writes: C File I/O [Read   once     ] = 92
+Unix I/O  Writes: Unix   I/O [Read   once     ] = 74
+<stdio.h> Writes: C File I/O [Block  transfers] = 149
+"stdio.h" Writes: C File I/O [Block  transfers] = 91
+Unix I/O  Writes: Unix   I/O [Block  transfers] = 87
+<stdio.h> Writes: C File I/O [Char   transfers] = 2057
+"stdio.h" Writes: C File I/O [Char   transfers] = 4232
+Unix I/O  Writes: Unix   I/O [Char   transfers] = 115158
+<stdio.h> Writes: C File I/O [Random transfers] = 125
+"stdio.h" Writes: C File I/O [Random transfers] = 108
+Unix I/O  Writes: Unix   I/O [Random transfers] = 1459
+
+My implementation is comparable to the library implementation times. The differences is probably due to optimizations in the library implementation that I don't have in my implementation. In general, my implementation works as expected for buffered I/O in that it is dramatically faster than Unix I/O when done one char at a time.
+
+Times for othello.txt
+<stdio.h> Reads : C File I/O [Read   once     ] = 198
+"stdio.h" Reads : C File I/O [Read   once     ] = 92
+Unix I/O  Reads : Unix   I/O [Read   once     ] = 68
+<stdio.h> Reads : C File I/O [Block  transfers] = 83
+"stdio.h" Reads : C File I/O [Block  transfers] = 45
+Unix I/O  Reads : Unix   I/O [Block  transfers] = 38
+<stdio.h> Reads : C File I/O [Char   transfers] = 1192
+"stdio.h" Reads : C File I/O [Char   transfers] = 4067
+Unix I/O  Reads : Unix   I/O [Char   transfers] = 52266
+<stdio.h> Reads : C File I/O [Random transfers] = 83
+"stdio.h" Reads : C File I/O [Random transfers] = 60
+Unix I/O  Reads : Unix   I/O [Random transfers] = 64
+<stdio.h> Writes: C File I/O [Read   once     ] = 147
+"stdio.h" Writes: C File I/O [Read   once     ] = 89
+Unix I/O  Writes: Unix   I/O [Read   once     ] = 66
+<stdio.h> Writes: C File I/O [Block  transfers] = 133
+"stdio.h" Writes: C File I/O [Block  transfers] = 94
+Unix I/O  Writes: Unix   I/O [Block  transfers] = 95
+<stdio.h> Writes: C File I/O [Char   transfers] = 2182
+"stdio.h" Writes: C File I/O [Char   transfers] = 4341
+Unix I/O  Writes: Unix   I/O [Char   transfers] = 110680
+<stdio.h> Writes: C File I/O [Random transfers] = 120
+"stdio.h" Writes: C File I/O [Random transfers] = 107
+Unix I/O  Writes: Unix   I/O [Random transfers] = 1375
+
+
+
