@@ -1,0 +1,74 @@
+barber  [0]: Sleeps because of no customers
+barber  [1]: Sleeps because of no customers
+barber  [2]: Sleeps because of no customers
+customer[1]: Moves to Barber [0] Waiting chairs availiable = [1]
+barber  [0]: Woken by customer [1]
+barber  [0]: Starts haircut for customer [1]
+customer[1]: Wait for barber [0] to be done with haircut
+customer[2]: Moves to Barber [1] Waiting chairs availiable = [1]
+barber  [1]: Woken by customer [2]
+barber  [1]: Starts haircut for customer [2]
+customer[2]: Wait for barber [1] to be done with haircut
+barber  [0]: Haircut done. Goodbye customer [1]
+barber  [0]: Sleeps because of no customers
+customer[1]: Goodbye barber [0]
+customer[3]: Moves to Barber [2] Waiting chairs availiable = [1]
+barber  [2]: Woken by customer [3]
+barber  [2]: Starts haircut for customer [3]
+customer[3]: Wait for barber [2] to be done with haircut
+barber  [1]: Haircut done. Goodbye customer [2]
+barber  [1]: Sleeps because of no customers
+customer[2]: Goodbye barber [1]
+customer[4]: Moves to Barber [0] Waiting chairs availiable = [1]
+barber  [0]: Woken by customer [4]
+barber  [0]: Starts haircut for customer [4]
+customer[4]: Wait for barber [0] to be done with haircut
+barber  [2]: Haircut done. Goodbye customer [3]
+barber  [2]: Sleeps because of no customers
+customer[3]: Goodbye barber [2]
+customer[5]: Moves to Barber [1] Waiting chairs availiable = [1]
+barber  [1]: Woken by customer [5]
+barber  [1]: Starts haircut for customer [5]
+customer[5]: Wait for barber [1] to be done with haircut
+barber  [0]: Haircut done. Goodbye customer [4]
+barber  [0]: Sleeps because of no customers
+customer[4]: Goodbye barber [0]
+customer[6]: Moves to Barber [2] Waiting chairs availiable = [1]
+barber  [2]: Woken by customer [6]
+barber  [2]: Starts haircut for customer [6]
+customer[6]: Wait for barber [2] to be done with haircut
+customer[7]: Moves to Barber [0] Waiting chairs availiable = [1]
+barber  [0]: Woken by customer [7]
+barber  [0]: Starts haircut for customer [7]
+customer[7]: Wait for barber [0] to be done with haircut
+barber  [1]: Haircut done. Goodbye customer [5]
+barber  [1]: Sleeps because of no customers
+customer[5]: Goodbye barber [1]
+barber  [2]: Haircut done. Goodbye customer [6]
+barber  [2]: Sleeps because of no customers
+customer[8]: Moves to Barber [1] Waiting chairs availiable = [1]
+barber  [1]: Woken by customer [8]
+barber  [1]: Starts haircut for customer [8]
+customer[8]: Wait for barber [1] to be done with haircut
+customer[6]: Goodbye barber [2]
+barber  [0]: Haircut done. Goodbye customer [7]
+barber  [0]: Sleeps because of no customers
+customer[7]: Goodbye barber [0]
+customer[9]: Moves to Barber [2] Waiting chairs availiable = [1]
+barber  [2]: Woken by customer [9]
+barber  [2]: Starts haircut for customer [9]
+customer[9]: Wait for barber [2] to be done with haircut
+barber  [1]: Haircut done. Goodbye customer [8]
+barber  [1]: Sleeps because of no customers
+customer[8]: Goodbye barber [1]
+customer[10]: Moves to Barber [0] Waiting chairs availiable = [1]
+barber  [0]: Woken by customer [10]
+barber  [0]: Starts haircut for customer [10]
+customer[10]: Wait for barber [0] to be done with haircut
+barber  [2]: Haircut done. Goodbye customer [9]
+barber  [2]: Sleeps because of no customers
+customer[9]: Goodbye barber [2]
+barber  [0]: Haircut done. Goodbye customer [10]
+barber  [0]: Sleeps because of no customers
+customer[10]: Goodbye barber [0]
+# customers who didn't receive a service = 0

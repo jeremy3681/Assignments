@@ -1,0 +1,24 @@
+Jeremy Albert
+Program 2
+
+Step2:
+	Included are Shop.h Shop.cpp & driver.cpp
+Step3:
+	BUILDRUN compiles and runs sleepingBarbers
+Step4: 
+	1-1-10-100 Results & 3-1-10-1000 Results files have been included.
+	My results are different than the baseline results. I'm guessing usleep is affecting this.
+	This may also affect my answers to step 5 & step 6.
+Step5:
+	./sleepingBarbers 1 # 200 1000
+	My program shows that I would need about 105 chairs to service all 200 customers.
+Step6:
+	./sleepingBarbers # 0 200 1000
+	My program shows that I would need about 6 barbers to service all 200 customers.
+
+Discussion:
+The spec says for the byecustomer function to call over another customer, but I have that in the hellocustomer function.
+Moving it would be easy, but I like that the if-else structure mirrors the visitshop.
+I thought that I had completed the assignment rather quickly, but without the ID's for the print statements.
+I implemented the print statements, and then a race condition started to present itself.
+I assumed that the usleep in the driver function, would cause a customerthread to call leaveshop function before a barberthread called byecustomer.
