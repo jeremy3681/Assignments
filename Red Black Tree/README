@@ -1,0 +1,19 @@
+Jeremy Albert
+Assignment 2
+
+BUILD
+Compiles the program wcount
+
+RUN
+Given the name of file it
+1. Formats the file and outputs to formatedfile
+2. Sorts the file with the shell and outputs to shellsortedfile
+3. Sorts the file with wcount and outputs to sortedfile
+4. Runs diff on sortedfiled and shellsortedfile to stdout
+
+DATA
+1.Generates a list of random words and outputs to datain.txt
+2.Runs wcount on datain.txt outputs to dataout.txt
+3.time of wcount to stdout
+4.increase size of list and repeat
+5.Repeat process but sorts words before outputing to datain.txt

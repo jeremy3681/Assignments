@@ -1,0 +1,10 @@
+#! /bin/bash
+cat $* |
+sed -e 's/[^A-Za-z]/\n/g' |
+grep -v '^$' |
+tr 'A-Z' 'a-z' >formated$*
+sort <formated$* |
+uniq -c |
+sed 's/^ *//g' >shellsorted$*
+./wcount <formated$* >sorted$*
+diff shellsorted$* sorted$* >report.txt

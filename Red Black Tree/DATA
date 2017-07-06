@@ -1,0 +1,21 @@
+#!/bin/bash 
+#Written by Jeremy Albert
+COUNTER=100000
+LENGTH=6
+echo word length $LENGTH
+while [  $COUNTER -lt 1000001 ]; do
+	./wrand $COUNTER $LENGTH >datain.txt
+	printf "%s unsorted words: " "$COUNTER"
+	TIMEFORMAT='%R seconds'
+	time { ./wcount <datain.txt >dataout.txt; }
+	let COUNTER=COUNTER+100000 
+done
+COUNTER=100000
+while [  $COUNTER -lt 1000001 ]; do
+	./wrand $COUNTER $LENGTH |
+	sort > datain.txt
+	printf "%s sorted words: " "$COUNTER"
+	TIMEFORMAT='%R seconds'
+	time { ./wcount <datain.txt >dataout.txt; }
+	let COUNTER=COUNTER+100000 
+done
